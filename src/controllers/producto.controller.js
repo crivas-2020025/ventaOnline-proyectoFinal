@@ -42,7 +42,7 @@ function ObtenerProductosId(req, res){
             return res.send({productos : productoEncontrado});
         })
     } else {
-        return res.status(500).send({mensaje: 'No posee permisos para completar la peticion'});
+        return res.status(500).send({mensaje: 'No tiene los permisos para completar la peticion'});
     }
 }
 
