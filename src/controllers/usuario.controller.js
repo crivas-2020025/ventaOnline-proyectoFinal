@@ -10,7 +10,7 @@ function login(req,res){
     var paramentros = req.body;
 
     Usuarios.findOne({email: paramentros.email},(err,usuarioGuardado)=>{
-        if(err) return res.status(500).send({mensaje:'Error en la peticion'})
+        if(err) return res.status(500).send({mensaje:'no sirve'})
         if(usuarioGuardado){
             bcrypt.compare(paramentros.password,usuarioGuardado.password,(err,verificacionPassword)=>{
                 if(verificacionPassword){
